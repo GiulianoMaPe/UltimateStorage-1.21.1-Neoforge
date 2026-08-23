@@ -1,3 +1,5 @@
 {
-  "item.ultimate_storage.example_item": "Example Item"
+  "item.ultimate_storage.example_item": "Example Item",
+  "block.ultimate_storage.example_block": "Example Block",
+  "creative_tab.ultimate_storage.ultimate_storage_tab": "Ultimate Storage"
 }

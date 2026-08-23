@@ -2,6 +2,8 @@ package net.msg.ultimate_storage;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.msg.ultimate_storage.block.ModBlocks;
+import net.msg.ultimate_storage.item.ModCreativeModeTabs;
 import net.msg.ultimate_storage.item.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -38,6 +40,8 @@ public class UltimateStorage {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -54,6 +58,9 @@ public class UltimateStorage {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.EXAMPLE_ITEM);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.EXAMPLE_BLOCK);
         }
     }
 
