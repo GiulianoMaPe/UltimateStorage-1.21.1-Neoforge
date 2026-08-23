@@ -17,9 +17,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        /*
-        dropSelf(ModBlocks.ENDER_NACRE_BLOCK.get());
-         */
+        dropSelf(ModBlocks.SCRAP_METAL_BLOCK.get());
+        dropSelf(ModBlocks.SILICON_BLOCK.get());
+        dropSelf(ModBlocks.GLASS_LENS_BLOCK.get());
+
+        dropSelf(ModBlocks.FLINT_BLOCK.get());
+
+        dropSelf(ModBlocks.STORAGE_UNIT.get());
     }
 
     @Override

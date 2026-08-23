@@ -1,35 +1,21 @@
 package net.msg.ultimate_storage.common.block;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.msg.ultimate_storage.UltimateStorage;
-import net.msg.ultimate_storage.common.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.util.function.Supplier;
-
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(UltimateStorage.MODID);
 
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = registerBlock("example_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3.0f, 6.0f)
-                    .sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> SCRAP_METAL_BLOCK = BLOCKS.registerSimpleBlock("scrap_metal_block");
+    public static final DeferredBlock<Block> SILICON_BLOCK = BLOCKS.registerSimpleBlock("silicon_block");
+    public static final DeferredBlock<Block> GLASS_LENS_BLOCK = BLOCKS.registerSimpleBlock("glass_lens_block");
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
+    public static final DeferredBlock<Block> FLINT_BLOCK = BLOCKS.registerSimpleBlock("flint_block");
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
+    public static final DeferredBlock<Block> STORAGE_UNIT = BLOCKS.registerSimpleBlock("storage_unit");
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

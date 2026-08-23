@@ -3,6 +3,7 @@ package net.msg.ultimate_storage;
 import net.msg.ultimate_storage.common.block.ModBlocks;
 import net.msg.ultimate_storage.common.item.ModCreativeModeTabs;
 import net.msg.ultimate_storage.common.item.ModItems;
+import net.msg.ultimate_storage.common.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -37,6 +38,8 @@ public class UltimateStorage {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

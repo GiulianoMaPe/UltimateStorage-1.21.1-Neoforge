@@ -1,0 +1,11 @@
+{
+  "block.ultimate_storage.flint_block": "Block of Flint",
+  "block.ultimate_storage.glass_lens_block": "Block of Glass Lens",
+  "block.ultimate_storage.scrap_metal_block": "Block of Scrap Metal",
+  "block.ultimate_storage.silicon_block": "Block of Silicon",
+  "block.ultimate_storage.storage_unit": "Storage Unit",
+  "item.ultimate_storage.glass_lens": "Glass Lens",
+  "item.ultimate_storage.scrap_metal": "Scrap Metal",
+  "item.ultimate_storage.silicon": "Silicon",
+  "ultimate_storage.ultimate_storage_tab": "Ultimate Storage"
+}

@@ -14,7 +14,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.METAL_SCRAP.get());
+        basicItem(ModItems.SCRAP_METAL.get());
         basicItem(ModItems.SILICON.get());
         basicItem(ModItems.GLASS_LENS.get());
     }

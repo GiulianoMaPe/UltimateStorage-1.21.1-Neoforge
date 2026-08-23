@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ULTIMATE_STORAGE_TAB =
             CREATIVE_MODE_TABS.register("ultimate_storage_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("ultimate_storage.ultimate_storage_tab"))
-                    .icon(() -> ModItems.METAL_SCRAP.get().getDefaultInstance())
+                    .icon(() -> ModItems.SCRAP_METAL.get().getDefaultInstance())
                     .displayItems((parameters, output) -> ModItems.ITEMS_LIST.forEach(output::accept))
                     .build());
 

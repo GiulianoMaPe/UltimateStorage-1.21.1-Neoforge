@@ -13,8 +13,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        /*
-        simpleBlockWithItem(ModBlocks.ENDER_NACRE_BLOCK.get(), cubeAll(ModBlocks.ENDER_NACRE_BLOCK.get()));
-         */
+        simpleBlockWithItem(ModBlocks.SCRAP_METAL_BLOCK.get(), cubeAll(ModBlocks.SCRAP_METAL_BLOCK.get()));
+        simpleBlockWithItem(ModBlocks.SILICON_BLOCK.get(), cubeAll(ModBlocks.SILICON_BLOCK.get()));
+        simpleBlockWithItem(ModBlocks.GLASS_LENS_BLOCK.get(), cubeAll(ModBlocks.GLASS_LENS_BLOCK.get()));
+
+        simpleBlockWithItem(ModBlocks.FLINT_BLOCK.get(), cubeAll(ModBlocks.FLINT_BLOCK.get()));
+
+        simpleBlockWithItem(ModBlocks.STORAGE_UNIT.get(), cubeAll(ModBlocks.STORAGE_UNIT.get()));
     }
 }
