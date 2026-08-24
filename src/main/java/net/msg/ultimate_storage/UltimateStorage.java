@@ -1,13 +1,9 @@
 package net.msg.ultimate_storage;
 
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.msg.ultimate_storage.block.ModBlocks;
-import net.msg.ultimate_storage.item.ModCreativeModeTabs;
-import net.msg.ultimate_storage.item.ModItems;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.msg.ultimate_storage.common.block.ModBlocks;
+import net.msg.ultimate_storage.common.item.ModCreativeModeTabs;
+import net.msg.ultimate_storage.common.item.ModItems;
+import net.msg.ultimate_storage.common.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -23,9 +19,9 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(UltimateStorage.MOD_ID)
+@Mod(UltimateStorage.MODID)
 public class UltimateStorage {
-    public static final String MOD_ID = "ultimate_storage";
+    public static final String MODID = "ultimate_storage";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -43,6 +39,8 @@ public class UltimateStorage {
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
+        ModLootModifiers.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -56,12 +54,14 @@ public class UltimateStorage {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        /*
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.EXAMPLE_ITEM);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.EXAMPLE_BLOCK);
         }
+         */
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
