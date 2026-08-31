@@ -20,6 +20,8 @@ public class ModItems {
     public static final DeferredItem<Item> SILICON = registerWithTab("silicon");
     public static final DeferredItem<Item> GLASS_LENS = registerWithTab("glass_lens");
 
+    public static final DeferredItem<Item> STORAGE_CHIP = registerWithTab("storage_chip");
+
     public static final DeferredItem<Item> SCRAP_METAL_BLOCK = registerWithTab("scrap_metal_block",
             () -> new BlockItem(ModBlocks.SCRAP_METAL_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> SILICON_BLOCK = registerWithTab("silicon_block",
@@ -30,8 +32,19 @@ public class ModItems {
     public static final DeferredItem<Item> FLINT_BLOCK = registerWithTab("flint_block",
             () -> new BlockItem(ModBlocks.FLINT_BLOCK.get(), new Item.Properties()));
 
+    public static final DeferredItem<Item> STORAGE_COMPONENT = registerWithTab("storage_component",
+            () -> new BlockItem(ModBlocks.STORAGE_COMPONENT.get(), new Item.Properties()));
+
     public static final DeferredItem<Item> STORAGE_UNIT = registerWithTab("storage_unit",
             () -> new BlockItem(ModBlocks.STORAGE_UNIT.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> STORAGE_CORE = registerWithTab("storage_core",
+            () -> new BlockItem(ModBlocks.STORAGE_CORE.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> STORAGE_TERMINAL = registerWithTab("storage_terminal",
+            () -> new BlockItem(ModBlocks.STORAGE_TERMINAL.get(), new Item.Properties()));
+
+
 
     public static DeferredItem<Item> registerWithTab(final String name, final Supplier<Item> sup) {
         DeferredItem<Item> itemBlock = ITEMS.register(name, sup);

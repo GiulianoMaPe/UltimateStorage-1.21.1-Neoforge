@@ -75,7 +75,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_flint", has(Items.FLINT))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORAGE_UNIT, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORAGE_COMPONENT, 1)
                 .pattern("MMM")
                 .pattern("MCM")
                 .pattern("MMM")
@@ -85,6 +85,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(ModTags.Items.COMMON_BARRELS)
                 ))
                 .unlockedBy("has_scrap_metal", has(ModItems.SCRAP_METAL))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORAGE_CORE, 1)
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("MMM")
+                .define('G', ModItems.GLASS_LENS)
+                .define('M', ModItems.SCRAP_METAL)
+                .unlockedBy("has_glass_lens", has(ModItems.GLASS_LENS))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STORAGE_TERMINAL, 1)
+                .pattern("SSS")
+                .pattern("SGS")
+                .pattern("SMS")
+                .define('G', ModItems.GLASS_LENS)
+                .define('M', ModItems.SCRAP_METAL)
+                .define('S', ModItems.SILICON)
+                .unlockedBy("has_silicon", has(ModItems.SILICON))
+                .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STORAGE_UNIT, 1)
+                .requires(ModItems.STORAGE_COMPONENT, 1)
+                .requires(ModItems.STORAGE_CHIP, 1)
+                .unlockedBy("has_storage_component", has(ModItems.STORAGE_COMPONENT))
                 .save(recipeOutput);
 
         /*

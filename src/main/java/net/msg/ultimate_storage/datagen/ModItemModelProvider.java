@@ -17,5 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SCRAP_METAL.get());
         basicItem(ModItems.SILICON.get());
         basicItem(ModItems.GLASS_LENS.get());
+
+        basicItem(ModItems.STORAGE_CHIP.get());
     }
 }

@@ -1,23 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "C": [
-      {
-        "tag": "c:chests"
-      },
-      {
-        "tag": "c:barrels"
-      }
-    ],
-    "M": {
-      "item": "ultimate_storage:scrap_metal"
+  "ingredients": [
+    {
+      "item": "ultimate_storage:storage_component"
+    },
+    {
+      "item": "ultimate_storage:storage_chip"
     }
-  },
-  "pattern": [
-    "MMM",
-    "MCM",
-    "MMM"
   ],
   "result": {
     "count": 1,

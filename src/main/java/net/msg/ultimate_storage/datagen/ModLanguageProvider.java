@@ -19,14 +19,16 @@ public class ModLanguageProvider extends LanguageProvider {
         addItem(ModItems.SILICON, "Silicon");
         addItem(ModItems.GLASS_LENS, "Glass Lens");
 
-
         addBlock(ModBlocks.SCRAP_METAL_BLOCK, "Block of Scrap Metal");
         addBlock(ModBlocks.SILICON_BLOCK, "Block of Silicon");
         addBlock(ModBlocks.GLASS_LENS_BLOCK, "Block of Glass Lens");
 
         addBlock(ModBlocks.FLINT_BLOCK, "Block of Flint");
 
+        addBlock(ModBlocks.STORAGE_COMPONENT, "Storage Component");
         addBlock(ModBlocks.STORAGE_UNIT, "Storage Unit");
+        addBlock(ModBlocks.STORAGE_CORE, "Storage Core");
+        addBlock(ModBlocks.STORAGE_TERMINAL, "Storage Terminal");
 
         add("ultimate_storage.ultimate_storage_tab", "Ultimate Storage");
     }

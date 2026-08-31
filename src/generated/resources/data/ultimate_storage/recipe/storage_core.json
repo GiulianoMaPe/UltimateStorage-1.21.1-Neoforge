@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "ultimate_storage:glass_lens"
+    },
+    "M": {
+      "item": "ultimate_storage:scrap_metal"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GGG",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimate_storage:storage_core"
+  }
+}

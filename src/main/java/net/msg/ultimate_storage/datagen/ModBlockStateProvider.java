@@ -19,6 +19,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlockWithItem(ModBlocks.FLINT_BLOCK.get(), cubeAll(ModBlocks.FLINT_BLOCK.get()));
 
+        simpleBlockWithItem(ModBlocks.STORAGE_COMPONENT.get(), cubeAll(ModBlocks.STORAGE_COMPONENT.get()));
         simpleBlockWithItem(ModBlocks.STORAGE_UNIT.get(), cubeAll(ModBlocks.STORAGE_UNIT.get()));
+
+        simpleBlockWithItem(ModBlocks.STORAGE_CORE.get(), models().cube(
+                "storage_core",
+                modLoc("block/storage_core_bottom"),
+                modLoc("block/storage_core_top"),
+                modLoc("block/storage_core"),
+                modLoc("block/storage_core"),
+                modLoc("block/storage_core"),
+                modLoc("block/storage_core")
+        ));
+
+        simpleBlockWithItem(ModBlocks.STORAGE_TERMINAL.get(), models().cube(
+                "storage_terminal",
+                modLoc("block/storage_terminal_side_top_bottom"),
+                modLoc("block/storage_terminal_side_top_bottom"),
+                modLoc("block/storage_terminal"),
+                modLoc("block/storage_terminal_back"),
+                modLoc("block/storage_terminal_side_top_bottom"),
+                modLoc("block/storage_terminal_side_top_bottom")
+        ));
     }
 }

@@ -15,7 +15,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> FLINT_BLOCK = BLOCKS.registerSimpleBlock("flint_block");
 
+    public static final DeferredBlock<Block> STORAGE_COMPONENT = BLOCKS.registerSimpleBlock("storage_component");
     public static final DeferredBlock<Block> STORAGE_UNIT = BLOCKS.registerSimpleBlock("storage_unit");
+    public static final DeferredBlock<Block> STORAGE_CORE = BLOCKS.registerSimpleBlock("storage_core");
+    public static final DeferredBlock<Block> STORAGE_TERMINAL = BLOCKS.registerSimpleBlock("storage_terminal");
+    // public static final DeferredBlock<Block> STORAGE_CONNECTOR = BLOCKS.registerSimpleBlock("storage_connector");
+
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

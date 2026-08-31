@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ultimate_storage:block/storage_core"
+    }
+  }
+}

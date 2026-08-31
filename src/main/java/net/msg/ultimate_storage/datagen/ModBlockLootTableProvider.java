@@ -23,7 +23,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.FLINT_BLOCK.get());
 
+        dropSelf(ModBlocks.STORAGE_COMPONENT.get());
         dropSelf(ModBlocks.STORAGE_UNIT.get());
+        dropSelf(ModBlocks.STORAGE_CORE.get());
+        dropSelf(ModBlocks.STORAGE_TERMINAL.get());
     }
 
     @Override

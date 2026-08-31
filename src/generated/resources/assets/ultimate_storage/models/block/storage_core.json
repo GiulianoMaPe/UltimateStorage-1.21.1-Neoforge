@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "ultimate_storage:block/storage_core_bottom",
+    "east": "ultimate_storage:block/storage_core",
+    "north": "ultimate_storage:block/storage_core",
+    "south": "ultimate_storage:block/storage_core",
+    "up": "ultimate_storage:block/storage_core_top",
+    "west": "ultimate_storage:block/storage_core"
+  }
+}
